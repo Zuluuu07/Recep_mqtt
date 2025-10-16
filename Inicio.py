@@ -29,7 +29,7 @@ def get_mqtt_message(broker, port, topic, client_id):
             message_received["received"] = True
     
     try:
-        client = mqtt.Client(client_id=client_id)
+        client = mqtt.Client(SEBASTIAN)
         client.on_message = on_message
         client.connect(broker, port, 60)
         client.subscribe(topic)
